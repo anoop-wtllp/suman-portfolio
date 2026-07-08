@@ -27,7 +27,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16"
+      className="relative flex min-h-dvh items-center overflow-hidden pt-24 pb-16 sm:pt-28"
     >
       {/* Soft pediatric sky background */}
       <div className="absolute inset-0 -z-20 bg-gradient-to-b from-sky-100 via-teal-50/60 to-rose-50" />
@@ -101,12 +101,12 @@ export function Hero() {
             Child Health Nursing Specialist
           </span>
 
-          <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.05] tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
             Suman <span className="gradient-text">Pal</span>
-            <span className="ml-2 inline-block anim-wiggle text-4xl">👶</span>
+            <span className="ml-2 inline-block anim-wiggle text-3xl sm:text-4xl">👶</span>
           </h1>
 
-          <p className="mt-4 font-display text-2xl font-semibold text-slate-700 sm:text-3xl">
+          <p className="mt-4 font-display text-xl font-semibold text-slate-700 sm:text-3xl">
             Caring with{" "}
             <span className="relative inline-grid align-bottom">
               {rotating.map((w, i) => (
@@ -170,7 +170,7 @@ export function Hero() {
 
         {/* Right: playful avatar scene */}
         <div className="relative flex justify-center">
-          <div className="relative h-72 w-72 sm:h-96 sm:w-96">
+          <div className="relative h-64 w-64 sm:h-80 sm:w-80 lg:h-96 lg:w-96">
             {/* scalloped sunburst */}
             <svg
               className="anim-spin-slow absolute inset-0 h-full w-full text-sky-300/70"
@@ -184,15 +184,15 @@ export function Hero() {
             <span className="pulse-ring" />
             <span className="pulse-ring" style={{ animationDelay: "1.4s" }} />
 
-            {/* orbiting twinkles around disc */}
+            {/* orbiting twinkles around disc (radius scales with container) */}
             {[0, 60, 120, 180, 240, 300].map((deg, i) => (
               <span
                 key={deg}
-                className="absolute left-1/2 top-1/2 -z-0"
-                style={{ transform: `rotate(${deg}deg) translateX(9.5rem)` }}
+                className="pointer-events-none absolute inset-0"
+                style={{ transform: `rotate(${deg}deg)` }}
               >
                 <Star
-                  className="h-4 w-4 text-amber-300 anim-twinkle"
+                  className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 text-amber-300 anim-twinkle"
                   style={{ animationDelay: `${i * 0.35}s` }}
                 />
               </span>

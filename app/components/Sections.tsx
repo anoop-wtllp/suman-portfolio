@@ -63,7 +63,7 @@ export function About() {
     "Clear, gentle communicator with children & parents",
   ];
   return (
-    <section id="about" className="relative py-24">
+    <section id="about" className="relative py-16 sm:py-24">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
         <Reveal variant="left" className="relative">
           <div className="relative mx-auto max-w-sm">
@@ -202,7 +202,7 @@ export function Education() {
     },
   ];
   return (
-    <section id="education" className="relative py-24">
+    <section id="education" className="relative py-16 sm:py-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white via-teal-50/40 to-white" />
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <Heading
@@ -294,7 +294,7 @@ export function Services() {
     },
   ];
   return (
-    <section id="services" className="relative py-24">
+    <section id="services" className="relative py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Heading
           eyebrow="Areas of Care"
@@ -371,7 +371,7 @@ export function Skills() {
     { name: "Growth & Development Monitoring", level: 91 },
   ];
   return (
-    <section id="skills" className="relative py-24">
+    <section id="skills" className="relative py-16 sm:py-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white to-teal-50/50" />
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
         <div>
@@ -452,7 +452,7 @@ export function Testimonials() {
     },
   ];
   return (
-    <section className="relative py-24">
+    <section className="relative py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Heading
           eyebrow="Kind Words"

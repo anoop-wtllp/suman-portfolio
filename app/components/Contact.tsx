@@ -22,7 +22,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative overflow-hidden py-24">
+    <section id="contact" className="relative overflow-hidden py-16 sm:py-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-teal-50 via-white to-rose-50" />
       <div className="blob -z-10 h-80 w-80 bg-teal-300/30" style={{ top: "10%", left: "-4rem" }} />
       <div className="blob -z-10 h-80 w-80 bg-rose-300/30" style={{ bottom: "5%", right: "-4rem", animationDelay: "4s" }} />
