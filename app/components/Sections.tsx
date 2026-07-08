@@ -343,7 +343,7 @@ export function Marquee() {
   ];
   const row = [...words, ...words];
   return (
-    <section className="border-y border-teal-100 bg-teal-600 py-5">
+    <section className="overflow-hidden border-y border-teal-100 bg-teal-600 py-5">
       <div className="marquee-track">
         {row.map((w, i) => (
           <div key={i} className="flex items-center gap-6 px-6">
