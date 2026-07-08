@@ -94,8 +94,8 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2">
         {/* Left: copy */}
         <div className="anim-fadeup text-center lg:text-left">
-          <span className="anim-popin inline-flex items-center gap-2 rounded-full border border-white bg-white/80 px-4 py-1.5 text-sm font-semibold text-teal-700 shadow-md backdrop-blur">
-            <span className="grid h-6 w-6 place-items-center rounded-full bg-rose-100 text-rose-500 anim-heartbeat">
+          <span className="anim-popin inline-flex max-w-full items-center gap-2 rounded-full border border-white bg-white/80 px-3 py-1.5 text-xs font-semibold text-teal-700 shadow-md backdrop-blur sm:px-4 sm:text-sm">
+            <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-rose-100 text-rose-500 anim-heartbeat">
               <Baby className="h-4 w-4" />
             </span>
             Child Health Nursing Specialist
@@ -124,7 +124,7 @@ export function Hero() {
             </span>
           </p>
 
-          <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-slate-600 lg:mx-0">
+          <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg lg:mx-0">
             B.Sc Nursing graduate from{" "}
             <span className="font-semibold text-teal-700">
               Indira Gandhi School and College of Nursing

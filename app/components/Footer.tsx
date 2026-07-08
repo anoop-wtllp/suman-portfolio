@@ -11,8 +11,8 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-slate-900 text-slate-300">
       <div className="blob h-72 w-72 bg-teal-600/20" style={{ top: "-3rem", right: "10%" }} />
-      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-        <div className="grid gap-10 md:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16">
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2.5">
               <span className="grid h-11 w-11 place-items-center rounded-2xl gradient-anim text-white">

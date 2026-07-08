@@ -31,21 +31,21 @@ function Heading({
   sub?: string;
 }) {
   return (
-    <div className="mx-auto mb-14 max-w-2xl text-center">
+    <div className="mx-auto mb-10 max-w-2xl px-1 text-center sm:mb-14">
       <Reveal variant="scale">
-        <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-teal-600">
+        <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-teal-600 sm:text-sm">
           <Sparkle className="h-4 w-4" />
           {eyebrow}
         </span>
       </Reveal>
       <Reveal delay={80}>
-        <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+        <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
           {title} {accent && <span className="gradient-text">{accent}</span>}
         </h2>
       </Reveal>
       {sub && (
         <Reveal delay={140}>
-          <p className="mt-4 text-lg text-slate-600">{sub}</p>
+          <p className="mt-4 text-base text-slate-600 sm:text-lg">{sub}</p>
         </Reveal>
       )}
     </div>
@@ -64,11 +64,11 @@ export function About() {
   ];
   return (
     <section id="about" className="relative py-16 sm:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-2">
         <Reveal variant="left" className="relative">
           <div className="relative mx-auto max-w-sm">
             <div className="absolute -inset-3 rounded-[2rem] gradient-anim opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-teal-100 bg-white p-8 shadow-2xl shadow-teal-500/10">
+            <div className="relative overflow-hidden rounded-[2rem] border border-teal-100 bg-white p-6 shadow-2xl shadow-teal-500/10 sm:p-8">
               <div className="grid h-40 place-items-center rounded-2xl gradient-anim">
                 <Stethoscope className="h-20 w-20 text-white/90" />
               </div>
@@ -99,13 +99,13 @@ export function About() {
             <span className="text-sm font-semibold uppercase tracking-wider text-teal-600">
               About Suman
             </span>
-            <h2 className="mt-3 font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
-              Caring is not a duty — <br />
+            <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              Caring is not a duty — <br className="hidden sm:block" />
               it&apos;s a <span className="gradient-text">calling.</span>
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <p className="mt-5 text-lg leading-relaxed text-slate-600">
+            <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
               Suman Pal is a dedicated nursing professional who earned her{" "}
               <span className="font-semibold text-slate-800">B.Sc Nursing</span>{" "}
               degree from{" "}
@@ -151,9 +151,9 @@ export function Stats() {
   return (
     <section className="relative overflow-hidden py-4">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="relative overflow-hidden rounded-[2.5rem] gradient-anim px-6 py-14 shadow-2xl shadow-teal-500/30">
+        <div className="relative overflow-hidden rounded-3xl gradient-anim px-5 py-10 shadow-2xl shadow-teal-500/30 sm:rounded-[2.5rem] sm:px-8 sm:py-14">
           <div className="absolute inset-0 shimmer opacity-20" />
-          <div className="relative grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <div className="relative grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
             {stats.map((s, i) => (
               <Reveal key={s.label} variant="scale" delay={i * 110}>
                 <div className="text-center text-white">
@@ -305,7 +305,7 @@ export function Services() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.title} variant="up" delay={(i % 3) * 100}>
-              <div className="card-lift group relative h-full overflow-hidden rounded-3xl border border-slate-100 bg-white p-7 shadow-lg">
+              <div className="card-lift group relative h-full overflow-hidden rounded-3xl border border-slate-100 bg-white p-6 shadow-lg sm:p-7">
                 <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-teal-50 transition-transform duration-500 group-hover:scale-[6]" />
                 <div className="relative">
                   <span className="grid h-14 w-14 place-items-center rounded-2xl bg-teal-100 text-teal-600 transition-colors duration-500 group-hover:bg-white/20 group-hover:text-white">
@@ -373,7 +373,7 @@ export function Skills() {
   return (
     <section id="skills" className="relative py-16 sm:py-24">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white to-teal-50/50" />
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 sm:gap-14 sm:px-8 lg:grid-cols-2">
         <div>
           <Heading
             eyebrow="Core Skills"
@@ -399,7 +399,7 @@ export function Skills() {
             ].map((b, i) => (
               <div
                 key={b.k}
-                className={`card-lift rounded-3xl bg-gradient-to-br ${b.c} p-7 text-white shadow-xl anim-float`}
+                className={`card-lift rounded-3xl bg-gradient-to-br ${b.c} p-5 text-white shadow-xl anim-float sm:p-7`}
                 style={{ animationDelay: `${i * 0.6}s` }}
               >
                 <b.icon className="h-10 w-10" />
@@ -463,7 +463,7 @@ export function Testimonials() {
         <div className="grid gap-6 md:grid-cols-3">
           {quotes.map((q, i) => (
             <Reveal key={q.name} variant="up" delay={i * 120}>
-              <figure className="card-lift relative h-full rounded-3xl border border-slate-100 bg-white p-8 shadow-lg">
+              <figure className="card-lift relative h-full rounded-3xl border border-slate-100 bg-white p-6 shadow-lg sm:p-8">
                 <span className="font-display text-7xl leading-none text-teal-200">
                   &ldquo;
                 </span>

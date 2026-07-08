@@ -28,19 +28,19 @@ export function Contact() {
       <div className="blob -z-10 h-80 w-80 bg-rose-300/30" style={{ bottom: "5%", right: "-4rem", animationDelay: "4s" }} />
 
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="mx-auto mb-14 max-w-2xl text-center">
+        <div className="mx-auto mb-10 max-w-2xl px-1 text-center sm:mb-14">
           <Reveal variant="scale">
-            <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider text-teal-600">
+            <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-teal-600 sm:text-sm">
               <Sparkle className="h-4 w-4" /> Get in Touch
             </span>
           </Reveal>
           <Reveal delay={80}>
-            <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
               Let&apos;s Talk About <span className="gradient-text">Care</span>
             </h2>
           </Reveal>
           <Reveal delay={140}>
-            <p className="mt-4 text-lg text-slate-600">
+            <p className="mt-4 text-base text-slate-600 sm:text-lg">
               Have a question or an opportunity? Suman would love to hear from you.
             </p>
           </Reveal>
@@ -79,7 +79,7 @@ export function Contact() {
                 e.preventDefault();
                 setSent(true);
               }}
-              className="rounded-3xl border border-slate-100 bg-white p-8 shadow-2xl shadow-teal-500/10"
+              className="rounded-3xl border border-slate-100 bg-white p-6 shadow-2xl shadow-teal-500/10 sm:p-8"
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="Your Name" name="name" placeholder="Jane Doe" />
